@@ -1,8 +1,10 @@
 # Steps to reproduce problem
 
 ### On Mac
+```
 vagrant up
 ./run-cmd.sh # Open up a docker container based off of standard "ubuntu" image
+```
 
 ### In docker image
 ```
