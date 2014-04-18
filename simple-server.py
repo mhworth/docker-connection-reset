@@ -34,7 +34,9 @@ class S(BaseHTTPRequestHandler):
     def do_POST(self):
         # Doesn't do anything with posted data
         self._set_headers()
-        self.wfile.write("<html><body><h1>POST!</h1></body></html>")
+        length = int(self.headers.getheader('content-length'))
+        data = self.rfile.read(length)
+        self.wfile.write("<html><body><h1>POST of length {}</h1></body></html>".format(len(data)))
         
 def run(server_class=HTTPServer, handler_class=S, port=8000):
     server_address = ('', port)
