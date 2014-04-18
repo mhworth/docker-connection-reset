@@ -71,3 +71,16 @@ In Docker VM:
 
 In EC2 the above procedure does not work
 
+Output:
+
+```
+oot@68465dcf84e5:/vagrant# ./test-cmd.sh 
+5+0 records in
+5+0 records out
+5120 bytes (5.1 kB) copied, 7.5435e-05 s, 67.9 MB/s
+20000+0 records in
+20000+0 records out
+20480000 bytes (20 MB) copied, 0.0400497 s, 511 MB/s
+<html><body><h1>POST of length 5120</h1></body></html>curl: (56) Recv failure: Connection reset by peer
+```
+
