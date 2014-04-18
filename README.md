@@ -2,7 +2,7 @@
 
 ### On Mac
 vagrant up
-./run-cmd.sh
+./run-cmd.sh # Open up a docker container based off of standard "ubuntu" image
 
 ### In docker image
 ```
@@ -42,3 +42,32 @@ vagrant@precise64:/vagrant$ ./test-cmd.sh
 ok
 ok
 ```
+
+### With locally running server
+
+In Vagrant VM:
+
+```
+cd /vagrant
+python simple-server.py
+```
+
+In Docker Container:
+```
+#Change URL to <mac ip>:8000
+./test-cmd.sh #works
+```
+On Mac itself:
+
+```
+python simple-server.py
+```
+
+In Docker VM:
+```
+#Change URL to <mac ip>:8000
+./test-cmd.sh #works
+```
+
+In EC2 the above procedure does not work
+
