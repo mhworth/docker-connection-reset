@@ -56,7 +56,7 @@ python simple-server.py
 
 In Docker Container:
 ```
-#Change URL to <mac ip>:8000
+#Change URL to <vm ip, 10.42.42.42 if using Vagrantfile>:8000
 ./test-cmd.sh #works
 ```
 On Mac itself:
